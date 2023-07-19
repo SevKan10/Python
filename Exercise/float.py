@@ -1,0 +1,5 @@
+a=  float(input("Hãy nhập số thực 1 "))
+b=  float(input("Hãy nhập số thực 2 "))
+c=  float(input("Hãy nhập số thực 3 "))
+d=  float(input("Hãy nhập số thực 4 "))
+print("Tổng tb cộng",(a+b+c+d)/4)
