@@ -29,7 +29,7 @@ while True:
     elif "hello" in you or "hi" in you or "hey seven" in you:
         robotSay = "Hello Khang"
     elif "my girlfriend" in you:
-        robotSay = "What do you do with a lover?"
+        robotSay = "What do you have a lover?"
     elif "your name" in you:
         robotSay = "My name's Seven. I'm a virtual assistant created by Khang"
     elif "today" in you:
