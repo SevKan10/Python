@@ -11,6 +11,7 @@ today = date.today()
 now = datetime.now()
 tz_VN = pytz.timezone('Asia/Ho_Chi_Minh')
 
+
 robotSay = ""
 
 while True:
@@ -30,7 +31,7 @@ while True:
         robotSay = "Hello Khang"
     elif "my girlfriend" in you:
         robotSay = "What do you have a lover?"
-    elif "your name" in you:
+    elif "your name" in you or "who are you" in you:
         robotSay = "My name's Seven. I'm a virtual assistant created by Khang"
     elif "today" in you:
         robotSay = today.strftime("%B %d, %Y")
@@ -39,6 +40,13 @@ while True:
     elif "time zone in Vietnam" in you:
         datetime_VN = datetime.now(tz_VN)
         robotSay = datetime_VN.strftime("%m/%d/%Y, %H:%M:%S")
+    elif "leap year" in you:
+        year = int(you[0:5])
+        if year%400==0 or (year%100!=0 and year%4==0):
+            robotSay = str(year) + " is a leap year."
+        else:
+            robotSay = str(year) + " is not a leap year."
+                    
     elif "bye" in you or "stop" in you:
         robotSay = "Goodbye sir"
         print(robotSay)
