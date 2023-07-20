@@ -48,6 +48,6 @@ while True:
     else:
         robotSay = "I can't understand you"
 
-    print(robotSay)
+    print("Assis: " +robotSay)
     engine.say(robotSay)
     engine.runAndWait()
