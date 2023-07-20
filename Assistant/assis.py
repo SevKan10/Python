@@ -25,7 +25,7 @@ while True:
 
     print("You: " + you)
     if you == "":
-        robotSay = "I can't understand you"
+        robotSay =""
     elif "hello" in you or "hi" in you or "hey seven" in you:
         robotSay = "Hello Khang"
     elif "my girlfriend" in you:
@@ -46,7 +46,7 @@ while True:
         engine.runAndWait()
         break
     else:
-        robotSay = "I am fine, and you?"
+        robotSay = "I can't understand you"
 
     print(robotSay)
     engine.say(robotSay)
