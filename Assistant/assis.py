@@ -2,7 +2,7 @@ import pyttsx3
 import speech_recognition as sr
 from datetime import date, datetime
 import pytz
-
+#---------------------------------------Khai báo thư viện
 engine = pyttsx3.init()
 rate = engine.getProperty('rate')
 engine.setProperty('rate', rate - 60)  # làm tốc độ nói chậm lại
@@ -10,7 +10,7 @@ robotEar = sr.Recognizer()
 today = date.today()
 now = datetime.now()
 tz_VN = pytz.timezone('Asia/Ho_Chi_Minh')
-
+#----------------------------------------Khởi tạo các hàm trong thư viện và tạo biến toàn cục
 
 robotSay = ""
 

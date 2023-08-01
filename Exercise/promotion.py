@@ -9,3 +9,4 @@ elif mon > 20000000:
     print("Số tiền được tặng là: ", mon * 0.04)
 else:
     print("Không có khuyến mãi!")
+
