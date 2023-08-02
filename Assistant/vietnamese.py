@@ -124,7 +124,7 @@ def send_email(text):
         mail.close()
         speak('Email của bạn vùa được gửi. Bạn check lại email nhé hihi.')
     else:
-        speak('Bot không hiểu bạn muốn gửi email cho ai. Bạn nói lại được không?'
+        speak('Bot không hiểu bạn muốn gửi email cho ai. Bạn nói lại được không?')
             
 def current_weather():
     speak("Bạn muốn xem thời tiết ở đâu ạ.")

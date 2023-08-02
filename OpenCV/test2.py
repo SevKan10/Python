@@ -1,23 +1,28 @@
 import cv2
 
-def display_image(image_path):
-    # Đọc hình ảnh từ đường dẫn
-    img = cv2.imread(image_path)
+def main():
+    cap = cv2.VideoCapture(0)
 
-    # Kiểm tra xem hình ảnh đã được đọc thành công chưa
-    if img is None:
-        print("Không thể đọc hình ảnh. Vui lòng kiểm tra lại đường dẫn.")
+    if not cap.isOpened():
+        print("Không thể mở camera.")
         return
 
-    # Hiển thị hình ảnh trong một cửa sổ
-    cv2.imshow("Hình ảnh", img)
+    while True:
+        ret, frame = cap.read()
 
-    # Đợi người dùng nhấn phím bất kỳ trước khi đóng cửa sổ
-    cv2.waitKey(0)
+        if not ret:
+            print("Không thể đọc hình ảnh từ camera.")
+            break
 
-    # Đóng tất cả các cửa sổ hiển thị
+        # Hiển thị hình ảnh từ camera
+        cv2.imshow('Camera', frame)
+
+        # Thoát khỏi vòng lặp khi nhấn phím 'q'
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+
+    cap.release()
     cv2.destroyAllWindows()
 
-# Ví dụ sử dụng
-image_path = "OpenCV/img/z4533842960509_92f4ffbf7b11c54cbe5a2102aa643814.jpg"  # Thay đổi đường dẫn này thành đường dẫn đến hình ảnh của bạn
-display_image(image_path)
+if __name__ == "__main__":
+    main()

@@ -2,9 +2,9 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
-img = cv2.imread('OpenCV/img/z4533842960509_92f4ffbf7b11c54cbe5a2102aa643814.jpg',cv2.IMREAD_GRAYSCALE)
+img = cv2.imread('OpenCV/img/z4533844284931_045324441d495d54fbdc91ddfec738cb.jpg') #Hàm đọc ảnh, cv2.IMREAD_GRAYSCALE thêm vào sau để chuyển chế độ xám
 
-plt.imshow(img, cmap = 'gray', interpolation = 'bicubic')
-plt.xticks([]), plt.yticks([])  # to hide tick values on X and Y axis
-plt.plot([200,300,400],[100,200,300],'c', linewidth=5)
+plt.imshow(cv2.cvtColor(img, cv2.COLOR_BGR2RGB), interpolation='bicubic')
+plt.xticks([]), plt.yticks([])  # để ẩn giá trị dấu chấm trên trục X và Y
+plt.plot([200, 300, 400], [100, 200, 300], 'c', linewidth=5)
 plt.show()
