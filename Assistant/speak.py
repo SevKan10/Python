@@ -1,5 +1,5 @@
 import pyttsx3
 engine = pyttsx3.init()
-robot = " Hello SevKan"
+robot = " Đã bật thiết bị 1"
 engine.say(robot)
 engine.runAndWait()
