@@ -3,9 +3,9 @@ import cv2
 import face_recognition
 
 imgThongBig = face_recognition.load_image_file('ImageBasic/khang.jpg')
-imgThongBig = cv2.cvtColor(imgThongBig,cv2.COLOR_BGR2RGB)
+# imgThongBig = cv2.cvtColor(imgThongBig,cv2.COLOR_BGR2RGB)
 imgThongTest = face_recognition.load_image_file('ImageBasic/khang.jpg')
-imgThongTest = cv2.cvtColor(imgThongTest,cv2.COLOR_BGR2RGB)
+# imgThongTest = cv2.cvtColor(imgThongTest,cv2.COLOR_BGR2RGB)
 
 faceLoc = face_recognition.face_locations(imgThongBig)[0] #top right bottom left
 print(faceLoc)
